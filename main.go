@@ -6,10 +6,9 @@ import (
 )
 
 func main() {
-	s, _ := time.Parse("2006-01-02", "2021-01-30")
-	// e, _ := time.Parse("2006-01-02", "2021-02-01")
 
-	log.Println(s.Day())
+	s, _ := time.Parse("2006-01-02", "2021-01-01")
+	e, _ := time.Parse("2006-01-02", "2020-01-01")
 
-	// log.Println(e.Sub(s).Hours() / 24)
+	log.Println(e.Before(s))
 }
